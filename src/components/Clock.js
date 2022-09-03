@@ -133,7 +133,7 @@ const Clock = () => {
             <Break breakLen={breakLen} onBreakDec={onBreakDec} onBreakInc={onBreakInc} />
             <Session sessionLen={sessionLen} onSessionDec={onSessionDec} onSessionInc={onSessionInc} />
             <Timer timeLeft={timeLeft} isSession={isSession} />
-            <Controls onStartStop={onStartStop} onHandleReset={onHandleReset} />
+            <Controls isRunning={isRunning} onStartStop={onStartStop} onHandleReset={onHandleReset} />
             {/* User Story #26: When a countdown reaches zero (NOTE: timer MUST reach 00:00), a sound indicating that time is up should play.
                 This should utilize an HTML5 audio tag and have a corresponding id="beep". */}
             {/* User Story #27: The audio element with id="beep" must be 1 second or longer. */}
