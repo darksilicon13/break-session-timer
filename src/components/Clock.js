@@ -3,6 +3,7 @@ import Break from './Break';
 import Controls from './Controls';
 import Session from './Session';
 import Timer from './Timer';
+import '../App.css';
 
 const Clock = () => {
 
@@ -22,6 +23,7 @@ const Clock = () => {
     const onHandleReset = () => {
         document.getElementById('beep').pause();
         setIsRunning(false);
+        setIsSession(true);
         setSessionLen(25);
         setBreakLen(5);
         setTimeLeft(25 * 60);
@@ -130,8 +132,10 @@ const Clock = () => {
         <div>
             <h1>25 + 5 Clock</h1>
 
-            <Break breakLen={breakLen} onBreakDec={onBreakDec} onBreakInc={onBreakInc} />
-            <Session sessionLen={sessionLen} onSessionDec={onSessionDec} onSessionInc={onSessionInc} />
+            <div className='length-items'>
+                <Break breakLen={breakLen} onBreakDec={onBreakDec} onBreakInc={onBreakInc} />
+                <Session sessionLen={sessionLen} onSessionDec={onSessionDec} onSessionInc={onSessionInc} />
+            </div>
             <Timer timeLeft={timeLeft} isSession={isSession} />
             <Controls isRunning={isRunning} onStartStop={onStartStop} onHandleReset={onHandleReset} />
             {/* User Story #26: When a countdown reaches zero (NOTE: timer MUST reach 00:00), a sound indicating that time is up should play.

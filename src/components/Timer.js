@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css'
 
 const Timer = ({ timeLeft, isSession }) => {
 
@@ -7,7 +8,7 @@ const Timer = ({ timeLeft, isSession }) => {
     }
     
     return (
-        <div style={timerStyle}>
+        <div className="timer" style={timerStyle}>
             {/* User Story #7: I can see an element with a corresponding id="timer-label", that contains a string indicating a session is initialized (e.g. "Session"). */}
             {/* User Story #22: When a session countdown reaches zero (NOTE: timer MUST reach 00:00), and a new countdown begins, the element with the id of timer-label should display a string indicating a break has begun. */}
             {/* User Story #24: When a break countdown reaches zero (NOTE: timer MUST reach 00:00), and a new countdown begins, the element with the id of timer-label should display a string indicating a session has begun. */}
