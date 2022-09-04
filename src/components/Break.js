@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 const Break = ({ breakLen, onBreakDec, onBreakInc }) => {
-
     return (
         <div className='length-item'>
             {/* User Story #1: I can see an element with id="break-label" that contains a string (e.g. "Break Length"). */}
